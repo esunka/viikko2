@@ -17,6 +17,24 @@ public class Varasto {
         saldo = 0;     // oletus: varasto on tyhjä
     }
 
+    public void manyifs() {
+        for( int i=0; i<1; i++ ) {
+            for( int j=0; i<j; j++ ) {
+              System.out.println("virhe");
+            } 
+          }
+          
+          
+        if(1>0) {
+            if(2>0) {
+                if(2>0) {
+                    return ;
+                }
+            }
+     
+        }
+        
+    }
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
         if (tilavuus > 0.0) {
             this.tilavuus = tilavuus;
