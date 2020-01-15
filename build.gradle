@@ -44,6 +44,11 @@ jacocoTestReport {
         xml.enabled true
         html.enabled true
     }
+    afterEvaluate {
+    getClassDirectories().from(files(classDirectories.files.collect {
+        fileTree(dir: it, exclude: 'main/**')
+    }))
+}
 }
 
 
