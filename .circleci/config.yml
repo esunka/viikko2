@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - checkout
-
+      - run: ./gradlew -v
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -39,6 +39,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
+      - run: ./gradlew -v
       - run: gradle test
       - run: ./gradlew check
       - run: ./gradlew jacocoTestReport
