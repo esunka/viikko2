@@ -6,3 +6,4 @@
 
 [![codecov](https://codecov.io/gh/esunka/ohtu-2019-viikko1/branch/master/graph/badge.svg)](https://codecov.io/gh/esunka/ohtu-2019-viikko1)
 
+[14-16](/NhlStatistics1)
