@@ -1,5 +1,9 @@
+
 package ohtu.main;
-import ohtu.ohtuvarasto.*;
+
+import ohtu.ohtuvarasto.Varasto;
+
+
 public class Main {
 
     public static void main(String[] args) {
