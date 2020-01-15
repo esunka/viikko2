@@ -1,0 +1,6 @@
+# ignore only in root
+
+/*tmp
+
+build/
+.gradle/
