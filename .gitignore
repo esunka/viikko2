@@ -4,3 +4,9 @@
 
 build/
 .gradle/
+
+#bin/
+#*.class
+#*.log
+#*.jar
+#!gradle-wrapper.jar
