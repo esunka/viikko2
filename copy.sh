@@ -1,0 +1,1 @@
+cp -R ../syksy2019/koodi/viikko2/Verkkokauppa1 verkkokauppa1
