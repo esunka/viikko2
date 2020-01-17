@@ -1,18 +1,18 @@
 package ohtu.verkkokauppa;
 
 import java.util.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
+@Component
 public class Varasto implements IVarasto{
 
-
+    @Autowired
     private IKirjanpito kirjanpito;
-    private HashMap<Tuote, Integer> saldot;  
+    private HashMap<Tuote, Integer> saldot = new HashMap<Tuote, Integer>();
     
-    public Varasto(IKirjanpito kirjanpito2) {
-        kirjanpito = kirjanpito2;
-        saldot = new HashMap<Tuote, Integer>();
-        alustaTuotteet();
-    }
     @Override
     public Tuote haeTuote(int id){
         for (Tuote t : saldot.keySet()) {
@@ -35,7 +35,7 @@ public class Varasto implements IVarasto{
         saldot.put(t,  saldo(t.getId())+1 );
         kirjanpito.lisaaTapahtuma("palautettiin varastoon "+t);
     }    
-    
+    @Autowired
     private void alustaTuotteet() {
         saldot.put(new Tuote(1, "Koff Portteri", 3), 100);
         saldot.put(new Tuote(2, "Fink Bräu I", 1), 25);
