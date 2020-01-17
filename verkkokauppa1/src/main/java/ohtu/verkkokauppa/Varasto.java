@@ -11,7 +11,13 @@ public class Varasto implements IVarasto{
 
     @Autowired
     private IKirjanpito kirjanpito;
-    private HashMap<Tuote, Integer> saldot = new HashMap<Tuote, Integer>();
+    private HashMap<Tuote, Integer> saldot = new HashMap<Tuote, Integer>();  
+    
+    /*public Varasto(IKirjanpito kirjanpito2) {
+        kirjanpito = kirjanpito2;
+        saldot = new HashMap<Tuote, Integer>();
+        alustaTuotteet();
+    }*/
     
     @Override
     public Tuote haeTuote(int id){
